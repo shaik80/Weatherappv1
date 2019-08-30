@@ -60,17 +60,19 @@ body{
     width: 50%
 }
 .temperature{
-    margin-top: 1em;
     font-family: sans-serif;
     font-size: 3em;
 }
-.sign a{
-    text-decoration: none;
-}
-.sign{
-    font-size: 0.3em;
+.sign {
+ font-size: 0.4em;   
 }
 
-.sign a:hover{
+.sign .farhenite:hover,
+.sign .celcius:hover{
     color:#1394f6;
+}
+
+.sign .farhenite,
+.sign .celcius{
+    margin-top:3%;
 }
