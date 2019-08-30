@@ -4,6 +4,7 @@ This application display's you weather details of particular city-->
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Weather app</title>
         <link href="./css/style.css" rel="stylesheet">
     </head>
@@ -11,15 +12,29 @@ This application display's you weather details of particular city-->
             <!-- start of left side -->
             <div class="split left">
                 <div class="centered">
-                    <h1>Weather </h1>
+                    <h1><span class="Weathercolor">Weather</span> App</h1>
                 </div>
             </div>
             <!-- end of left side -->
 
             <!-- start of right side -->
             <div class="split right">
+                <div class="weathercontainer">
+                    <p class="weatherdetails">Bengaluru, Karnataka</p>
+                    <p class="linespace">Wednesday <span>1:00 pm</span></p>                          
+                    <p class="linespace">Party Cloudy <sup> ☁️️ </sup></p>
+                    <h1 class="temperature"> 70 <sup class="sign"><a  href="#">&#8451;</a> | <a href="#">&#8457;</a></sup></h1>
+                </div>
                 <div class="centered">
-                    
+                    <label>Enter city name</label><br>
+                    <input list="city" name="browser" class="inputsize" placeholder="City,State">
+                    <datalist id="city">
+                        <option value="Bengaluru,Karnataka">
+                        <option value="Firefox">
+                        <option value="Chrome">
+                        <option value="Opera">
+                        <option value="Safari">
+                    </datalist>
                 </div>
             </div>
             <!-- end of right side -->
