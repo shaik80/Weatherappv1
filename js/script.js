@@ -1,5 +1,7 @@
-
-class weatherdetails{
+class Globalclass{
+  
+} 
+class Weatherdetails{
     
     showdaytime(){
         let now = new Date();
@@ -23,7 +25,7 @@ class weatherdetails{
     
     getcelsius(){
       let getcity = document.getElementById("getcity").value;
-      let displaycity = document.getElementById("displaycity");
+      t displaycity = document.getElementById("displaycity");
       let celsius = document.getElementById("celsius");
       let info = document.getElementById("info");
       let emoji = document.getElementById("emoji");  
@@ -72,5 +74,5 @@ class weatherdetails{
       
 }
 
-weather = new weatherdetails();
+weather = new Weatherdetails();
 setInterval(weather.showdaytime,1000)
