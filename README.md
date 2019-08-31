@@ -1,4 +1,9 @@
 # Weatherapp
+Hello Aliens,
+
+This is shaik
+
+### Quick info
      Project Name: Weather app 
      language: HTMl,CSS,JS
      Author: Shaik Mudassir
