@@ -1,6 +1,3 @@
-class Globalclass{
-  
-} 
 class Weatherdetails{
     
     showdaytime(){
