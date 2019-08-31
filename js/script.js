@@ -65,7 +65,7 @@ class weatherdetails{
           console.log(x);
         }
       }
-      
+    
 
 
       
