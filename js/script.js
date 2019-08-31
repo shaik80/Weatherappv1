@@ -1,3 +1,9 @@
+let getcity = document.getElementById("getcity").value;
+let displaycity = document.getElementById("displaycity");
+let celsius = document.getElementById("celsius");
+let info = document.getElementById("info");
+let emoji = document.getElementById("emoji");  
+
 class weatherdetails{
     
     showdaytime(){
@@ -21,23 +27,18 @@ class weatherdetails{
     }
     
     getcelsius(){
-        let getcity = document.getElementById("getcity").value;
-        let displaycity = document.getElementById("displaycity");
-        let celsius = document.getElementById("celsius");
-        let info = document.getElementById("info");
-        let emoji = document.getElementById("emoji");  
         let val =[
             {city:"Bengaluru,Karnataka",celsius:"21",info:"partly Clould",img:"⛅"},
             {city:"Hydrabad,Andhra Pradesh",celsius:"22",info:"partly Clould",img:"⛅"},
             {city:"Chennai,Tamil Nadu",celsius:"32",info:"Sunny",img:"☀️"},
             {city:"Mumbai,Maharashtra",celsius:"27",info:"Rain",img:"🌧️"}
           ];
-          val.filter(v => (v.city.includes(getcity)))
+          val.filter(v => (v.city.includes(this.getcity)))
              .map(v=> {
-                    displaycity.innerHTML = v.city,
-                    celsius.innerHTML = v.celsius,
-                    info.innerHTML = v.info,
-                    emoji.innerHTML = v.img
+                  this.displaycity.innerHTML = v.city,
+                  this.celsius.innerHTML = v.celsius,
+                  this.info.innerHTML = v.info,
+                  this.emoji.innerHTML = v.img
                       })
                       document.getElementById("C").classList.add("active");
                       document.getElementById("F").classList.remove("active");
@@ -50,7 +51,7 @@ class weatherdetails{
         let C = document.getElementById('C');
         let F = document.getElementById('F');
         if (degree == 'C') {
-          x = (celsius.innerHTML -32)  * 5 / 9;
+          x = (tcelsius.innerHTML -32)  * 5 / 9;
           celsius.innerHTML = Math.round(x);
           C.classList.add("active");
           F.classList.remove("active");
