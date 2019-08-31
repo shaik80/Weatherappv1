@@ -25,7 +25,7 @@ class Weatherdetails{
     
     getcelsius(){
       let getcity = document.getElementById("getcity").value;
-      t displaycity = document.getElementById("displaycity");
+      let displaycity = document.getElementById("displaycity");
       let celsius = document.getElementById("celsius");
       let info = document.getElementById("info");
       let emoji = document.getElementById("emoji");  
