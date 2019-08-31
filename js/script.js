@@ -32,7 +32,7 @@ class weatherdetails{
             {city:"Chennai,Tamil Nadu",celsius:"32",info:"Sunny",img:"☀️"},
             {city:"Mumbai,Maharashtra",celsius:"27",info:"Rain",img:"🌧️"}
           ];
-          val.filter(v => (v.city == getcity))
+          val.filter(v => (v.city.includes(getcity)))
              .map(v=> {
                     displaycity.innerHTML = v.city,
                     celsius.innerHTML = v.celsius,
