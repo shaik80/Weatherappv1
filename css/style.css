@@ -67,12 +67,17 @@ body{
  font-size: 0.4em;   
 }
 
-.sign .farhenite:hover,
+.sign .fahrenheit:hover,
 .sign .celcius:hover{
     color:#1394f6;
 }
 
-.sign .farhenite,
+.sign .fahrenheit,
 .sign .celcius{
-    margin-top:3%;
+    cursor: pointer;
+}
+
+.active{
+    color:#1394f6;
+    pointer-events: none;
 }

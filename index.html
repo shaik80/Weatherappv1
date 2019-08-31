@@ -24,22 +24,30 @@ This application display's you weather details of particular city
                 <div class="weathercontainer">
                     <p class="weatherdetails" id="displaycity">Bengaluru, Karnataka</p>
                     <p class="linespace" id="daytime"></p>                          
-                    <p class="linespace" id="info">Party Cloudy <sup ><span id="emoji"> ☁️️</span> </sup></p>
-                    <p class="temperature"> 70 
-                        <sup class="sign"><span class="celcius" id="celsius">&#8451;</span> | <span class="farhenite">&#8457;</span></sup></h1>
+                    <div class="linespace" >
+                        <span id="info"> Party Cloudy</span> 
+                        <span id="emoji"></span>
+                    </div>
+                    <h1 class="temperature">
+                            <span id="celsius">20</span>
+                            <sup class="sign">
+                                <span class="celcius" onclick="weather.convert('C')" id="C">&#8451;</span>|
+                                <span class="fahrenheit" onclick="weather.convert('F')" id="F">&#8457;</span>
+                            </sup>
+                        </h1>
+                    <p >
+
                 </div>
                 <div class="centered">
                     <label>Enter city name</label><br>
                     <input list="city" class="inputsize" 
-                     placeholder="City,State" id="getcity">
+                     placeholder="City,State" id="getcity" onchange="weather.getcelsius()">
                     <datalist id="city">
-                        <option value="Bengaluru">
-                        <option value="Firefox">
-                        <option value="Chrome">
-                        <option value="Opera">
-                        <option value="Safari">
+                        <option value="Bengaluru,Karnataka">
+                        <option value="Mumbai,Maharashtra">
+                        <option value="Hydrabad,Andhra Pradesh">
+                        <option value="Chennai,Tamil Nadu">
                     </datalist>
-                    <button onclick="weather.getcelsius()">Submit</button>
                 </div>
             </div>
             <!-- end of right side -->
