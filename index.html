@@ -1,8 +1,7 @@
 <!-- Project Name: Weather app 
-     Des: This application display's weather details of a particular city when selected
-     lang: HTMl,CSS,JS
+     Description: This application display's weather details of a particular city when selected
+     language: HTMl,CSS,JS
      Author: Shaik Mudassir
-
 -->
 
 <!DOCTYPE html>
@@ -33,17 +32,16 @@
                     <h1 class="temperature">
                             <span id="celsius">20</span>
                             <sup class="sign">
-                                <span class="celcius" onclick="weather.convert('C')" id="C">&#8451;</span>|
-                                <span class="fahrenheit" onclick="weather.convert('F')" id="F">&#8457;</span>
+                                <span class="celcius" onclick="weather.getcelsius('C')" id="C">&#8451;</span>|
+                                <span class="fahrenheit" onclick="weather.getcelsius('F')" id="F">&#8457;</span>
                             </sup>
                         </h1>
                     <p >
-
                 </div>
                 <div class="centered">
                     <label>Enter city name</label><br>
                     <input list="city" class="inputsize" 
-                     placeholder="City,State" id="getcity" onchange="weather.getcelsius()">
+                     placeholder="City,State" id="getcity" onchange="weather.getcelsius(0)">
                     <datalist id="city">
                         <option value="Bengaluru,Karnataka">
                         <option value="Mumbai,Maharashtra">

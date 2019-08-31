@@ -1,3 +1,7 @@
+// Project Name: Weather app 
+//      Description: This application display's weather details of a particular city when selected
+//      language: HTMl,CSS,JS
+//      Author: Shaik Mudassir
 class Weatherdetails{
     
     showdaytime(){
@@ -20,13 +24,16 @@ class Weatherdetails{
         document.getElementById("daytime").innerHTML = time;
     }
     
-    getcelsius(){
+    getcelsius(degree){
+      let x;
       let getcity = document.getElementById("getcity").value;
       let displaycity = document.getElementById("displaycity");
       let celsius = document.getElementById("celsius");
       let info = document.getElementById("info");
-      let emoji = document.getElementById("emoji");  
-
+      let emoji = document.getElementById("emoji");
+      let C =document.getElementById("C");
+      let F =document.getElementById("F");  
+      if (degree == 0){
         let val =[
             {city:"Bengaluru,Karnataka",celsius:"21",info:"partly Clould",img:"⛅"},
             {city:"Hydrabad,Andhra Pradesh",celsius:"22",info:"partly Clould",img:"⛅"},
@@ -40,35 +47,22 @@ class Weatherdetails{
                     info.innerHTML = v.info,
                     emoji.innerHTML = v.img
                       })
-                      document.getElementById("C").classList.add("active");
-                      document.getElementById("F").classList.remove("active");
+                      C.classList.add("active");
+                      F.classList.remove("active");
       }
-
-
-      convert(degree) {
-        let x;
-        let celsius = document.getElementById("celsius");
-        let C = document.getElementById('C');
-        let F = document.getElementById('F');
-        if (degree == 'C') {
-          x = (celsius.innerHTML -32)  * 5 / 9;
-          celsius.innerHTML = Math.round(x);
-          C.classList.add("active");
-          F.classList.remove("active");
-          console.log(x);
-        } 
-        else {
-          x = (celsius.innerHTML * 9 / 5) + 32;
+      else if(degree == 'C'){
+        x = (celsius.innerHTML -32)  * 5 / 9;
+        celsius.innerHTML = Math.round(x);
+        C.classList.add("active");
+        F.classList.remove("active");
+      }
+      else if(degree == 'F'){
+        x = (celsius.innerHTML * 9 / 5) + 32;
           celsius.innerHTML = Math.round(x);
           F.classList.add("active");
           C.classList.remove("active");
-          console.log(x);
-        }
       }
-      
-
-
-      
+    }
 }
 
 weather = new Weatherdetails();
